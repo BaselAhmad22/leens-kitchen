@@ -18,7 +18,7 @@ export function ImagePicker({
 
   useEffect(() => {
     if (!open) return;
-    fetch(withBasePath("/api/media")
+    fetch(withBasePath("/api/media"))
       .then((r) => r.json())
       .then((d) => setFiles(d.files || []));
   }, [open]);
