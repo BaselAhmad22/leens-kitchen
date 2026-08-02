@@ -3,7 +3,7 @@
 FROM node:22-bookworm-slim AS admin-deps
 WORKDIR /app
 COPY admin/package.json admin/package-lock.json ./
-RUN npm ci
+RUN npm install --no-audit --no-fund
 
 FROM node:22-bookworm-slim AS admin-builder
 WORKDIR /app
@@ -17,7 +17,7 @@ RUN npm run build
 FROM node:22-bookworm-slim AS site-deps
 WORKDIR /app
 COPY site/package.json site/package-lock.json ./
-RUN npm ci
+RUN npm install --no-audit --no-fund
 
 FROM node:22-bookworm-slim AS site-builder
 WORKDIR /app
