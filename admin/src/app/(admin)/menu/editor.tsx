@@ -3,11 +3,8 @@
 import { useState } from "react";
 import { withBasePath } from "@/lib/base-path";
 import { ImagePicker } from "@/components/image-picker";
-import { withBasePath } from "@/lib/base-path";
 import { SaveBar, useSiteEditor } from "@/components/save-bar";
-import { withBasePath } from "@/lib/base-path";
 import type { MenuCategory, MenuItem, SiteData } from "@/lib/types";
-import { withBasePath } from "@/lib/base-path";
 import {
   ArrowLeft,
   CaretRight,

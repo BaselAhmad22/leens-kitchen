@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { withBasePath } from "@/lib/base-path";
 import { Image as ImageIcon } from "@phosphor-icons/react";
-import { withBasePath } from "@/lib/base-path";
 
 type MediaFile = { name: string; path: string };
 

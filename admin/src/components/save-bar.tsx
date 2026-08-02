@@ -3,11 +3,8 @@
 import { useEffect, useState } from "react";
 import { withBasePath } from "@/lib/base-path";
 import { Check, FloppyDisk, SpinnerGap, WarningCircle } from "@phosphor-icons/react";
-import { withBasePath } from "@/lib/base-path";
 import { AnimatePresence, motion } from "motion/react";
-import { withBasePath } from "@/lib/base-path";
 import type { SiteData } from "@/lib/types";
-import { withBasePath } from "@/lib/base-path";
 
 export function useSiteEditor(initial: SiteData) {
   const [data, setData] = useState(initial);

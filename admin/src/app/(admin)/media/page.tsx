@@ -3,11 +3,8 @@
 import { FormEvent, useEffect, useState } from "react";
 import { withBasePath } from "@/lib/base-path";
 import { PageHeader } from "@/components/save-bar";
-import { withBasePath } from "@/lib/base-path";
 import { UploadSimple, Trash } from "@phosphor-icons/react";
-import { withBasePath } from "@/lib/base-path";
 import { motion } from "motion/react";
-import { withBasePath } from "@/lib/base-path";
 
 type MediaFile = { name: string; path: string };
 
