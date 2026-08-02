@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+/* Starbucks DESIGN.md — warm café retail system for Leen's Kitchen */
+
+:root {
+  --bg: #f2f0eb;
+  --bg-elevated: #ffffff;
+  --bg-muted: #edebe9;
+  --fg: rgba(0, 0, 0, 0.87);
+  --fg-muted: rgba(0, 0, 0, 0.58);
+  --fg-soft: rgba(0, 0, 0, 0.45);
+  --accent: #00754a;
+  --accent-fg: #ffffff;
+  --sage: #006241;
+  --sage-soft: #d4e9e2;
+  --border: rgba(0, 0, 0, 0.1);
+  --ring: #00754a;
+  --house: #1e3932;
+  --gold: #cba258;
+  --radius: 12px;
+  --radius-sm: 50px;
+  --shadow: 0 8px 12px rgba(0, 0, 0, 0.14), 0 0 6px rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+  --nav-h: 72px;
+  --z-nav: 40;
+  --z-overlay: 60;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-bg-muted: var(--bg-muted);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-soft: var(--fg-soft);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-olive: var(--sage);
+  --color-olive-soft: var(--sage-soft);
+  --color-sage: var(--sage);
+  --color-sage-soft: var(--sage-soft);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-lora);
+  --radius-page: var(--radius);
+  --radius-control: var(--radius-sm);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-manrope), "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: -0.01em;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--accent) 24%, transparent);
+  color: var(--fg);
+}
+
+.studio-glow {
+  background:
+    radial-gradient(ellipse 70% 50% at 8% 0%, color-mix(in oklab, #d4e9e2 55%, transparent), transparent 55%),
+    radial-gradient(ellipse 55% 40% at 95% 10%, color-mix(in oklab, #cba258 12%, transparent), transparent 50%),
+    linear-gradient(180deg, #edebe9 0%, var(--bg) 45%, #f2f0eb 100%);
+}
+
+.surface {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.surface-soft {
+  background: var(--bg-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 3px;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--accent-fg);
+  padding: 0.55rem 1.15rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: var(--sage);
+  border-color: var(--sage);
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.87);
+  background: transparent;
+  color: var(--fg);
+  padding: 0.55rem 1.15rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.btn-secondary:active {
+  transform: scale(0.95);
+}
+
+.field-input {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--fg);
+  padding: 0.75rem 0.9rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field-input::placeholder {
+  color: var(--fg-soft);
+}
+
+.field-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(0, 117, 74, 0.18);
+}
+
+.marquee-track {
+  animation: marquee 36s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "restaurant": {
+    "name": "Leen's",
+    "fullName": "Leen's Middle East Kitchen",
+    "tagline": "Modern Syrian cooking in TTDI",
+    "phone": "+6011 7020 7551",
+    "phoneHref": "tel:+601170207551",
+    "email": "hello@leens.kitchen",
+    "address": "1F, 136A Jalan Burhanuddin Helmi",
+    "neighbourhood": "Taman Tun Dr Ismail",
+    "city": "Kuala Lumpur",
+    "postcode": "60000",
+    "country": "Malaysia",
+    "mapsUrl": "https://www.google.com/maps/place/Leen%E2%80%99s+Middle+East+Kitchen+TTDI/@3.1530978,101.622878,16z",
+    "michelinUrl": "https://guide.michelin.com/en/kuala-lumpur-region/kuala-lumpur/restaurant/leen-s",
+    "hours": [
+      { "label": "Monday - Friday", "value": "6:00 pm - 12:00 am" },
+      { "label": "Saturday - Sunday", "value": "12:00 pm - 3:00 pm, 6:00 pm - 12:00 am" }
+    ],
+    "chef": "Ameer Alzalek",
+    "award": "MICHELIN Bib Gourmand"
+  },
+  "menuCategories": [
+    {
+      "id": "starters",
+      "title": "Starters",
+      "intro": "Shareable plates meant for the middle of the table.",
+      "items": [
+        {
+          "id": "smoked-hummus",
+          "name": "Smoked Hummus",
+          "description": "Chickpeas and tahini finished with charcoal-smoked Syrian olive oil, paprika oil, and hot Arabic bread.",
+          "price": 28,
+          "highlight": true,
+          "image": "/images/hero-hummus.png"
+        },
+        {
+          "id": "beef-kofta-tartare",
+          "name": "Beef Kofta Tartare",
+          "description": "Australian Black Angus with harissa, garlic sauce, lemon, walnut, and chives.",
+          "price": 68,
+          "highlight": false,
+          "image": "/images/dish-tartare.png"
+        },
+        {
+          "id": "halloumi-fattoush",
+          "name": "Halloumi Fattoush",
+          "description": "Heirloom tomatoes, kyuri, toasted sourdough croutons, halloumi, olives, spring onion dressing.",
+          "price": 35,
+          "highlight": false,
+          "image": "/images/dish-fattoush.png"
+        }
+      ]
+    },
+    {
+      "id": "bread",
+      "title": "From the oven",
+      "intro": "Pide and bread pulled from the brick oven all evening.",
+      "items": [
+        {
+          "id": "mariah-pide",
+          "name": "Mariah Pide",
+          "description": "Minced lamb, pomegranate seeds and sauce, tahini, pine nuts.",
+          "price": 45,
+          "highlight": true,
+          "image": "/images/dish-pide.png"
+        },
+        {
+          "id": "mushroom-pide",
+          "name": "Mushroom Pide",
+          "description": "Fresh mushrooms, truffle paste, onion, and a bright finish of lime.",
+          "price": 38,
+          "highlight": false,
+          "image": "/images/dish-mushroom-pide.png"
+        },
+        {
+          "id": "arabic-bread",
+          "name": "Arabic Bread",
+          "description": "Puffy, sesame-dusted flatbread, served hot from the oven.",
+          "price": 8,
+          "highlight": false,
+          "image": "/images/dish-arabic-bread.png"
+        }
+      ]
+    },
+    {
+      "id": "mains",
+      "title": "Mains",
+      "intro": "Centrepieces built for sharing, with tang, smoke, and spice.",
+      "items": [
+        {
+          "id": "kebab-khashkhash",
+          "name": "Kebab Khashkhash",
+          "description": "Lamb skewers in a sharp poppy seed sauce, sealed under a bread cap.",
+          "price": 48,
+          "highlight": true,
+          "image": "/images/dish-kebab.png"
+        },
+        {
+          "id": "australian-lamb-rack",
+          "name": "Australian Lamb Rack",
+          "description": "Pan-seared lamb on muhammara with pistachios, pickled beetroot, and herbs.",
+          "price": 88,
+          "highlight": true,
+          "image": "/images/dish-lamb.png"
+        },
+        {
+          "id": "wagyu-beef",
+          "name": "Wagyu Beef",
+          "description": "Australian BMS2 striploin, eggplant puree, tomato raisins, hazelnuts, 12-spice oil.",
+          "price": 78,
+          "highlight": false,
+          "image": "/images/dish-wagyu.png"
+        },
+        {
+          "id": "grilled-chicken",
+          "name": "Grilled Chicken",
+          "description": "Brined kampung chicken with garlic sauce, soy reduction, sumac, and local herbs.",
+          "price": 63,
+          "highlight": false,
+          "image": "/images/dish-chicken.png"
+        },
+        {
+          "id": "duck-breast",
+          "name": "Duck Breast",
+          "description": "Four-day dry-aged duck with batata harra, chimichurri, citrus zest, and greens.",
+          "price": 68,
+          "highlight": false,
+          "image": "/images/dish-duck.png"
+        }
+      ]
+    },
+    {
+      "id": "sweets",
+      "title": "Sweets",
+      "intro": "A soft close after the spice and smoke.",
+      "items": [
+        {
+          "id": "kunafa-ice-cream",
+          "name": "Kunafa Ice Cream",
+          "description": "Smoked pistachio cream under crackly kataifi, finished with dried apricot.",
+          "price": 28,
+          "highlight": true,
+          "image": "/images/dish-kunafa.png"
+        },
+        {
+          "id": "kurma-labneh",
+          "name": "Kurma Labneh",
+          "description": "Stuffed dates with strained yogurt, honey, and roasted almond.",
+          "price": 10,
+          "highlight": false,
+          "image": "/images/dish-kurma.png"
+        }
+      ]
+    }
+  ],
+  "signatures": [
+    {
+      "id": "sig-hummus",
+      "name": "Smoked Hummus",
+      "price": 28,
+      "note": "The dish that put Leen's on KL maps. Thick, smoky, and scooped with bread still hot from the oven.",
+      "image": "/images/hero-hummus.png"
+    },
+    {
+      "id": "sig-kebab",
+      "name": "Kebab Khashkhash",
+      "price": 48,
+      "note": "Lamb under a bread lid. Cut it open and steam carries spice across the table.",
+      "image": "/images/dish-kebab.png"
+    },
+    {
+      "id": "sig-lamb",
+      "name": "Australian Lamb Rack",
+      "price": 88,
+      "note": "Sweet-sour muhammara, pistachios, and lamb cooked with Syrian zest in mind.",
+      "image": "/images/dish-lamb.png"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "t1",
+      "quote": "This is the city's most addictive hummus. A thick, smooth blend with charcoal-smoked Syrian olive oil.",
+      "name": "Eat Drink KL",
+      "role": "Food editorial"
+    },
+    {
+      "id": "t2",
+      "quote": "Unmistakably Middle Eastern, rife with bold colours and flavours. Try the kebab khashkhash.",
+      "name": "MICHELIN Guide",
+      "role": "Bib Gourmand"
+    },
+    {
+      "id": "t3",
+      "quote": "Super cozy and one of the best places for hummus in KL. Reserve ahead.",
+      "name": "Local diner",
+      "role": "TTDI regular"
+    }
+  ],
+  "navLinks": [
+    { "href": "/", "label": "Home" },
+    { "href": "/menu", "label": "Menu" },
+    { "href": "/about", "label": "Story" },
+    { "href": "/reserve", "label": "Reserve" }
+  ]
+}
