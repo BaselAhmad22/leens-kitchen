@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { withBasePath } from "@/lib/base-path";
 import { usePathname, useRouter } from "next/navigation";
+import { withBasePath } from "@/lib/base-path";
 import {
   House,
   Storefront,
@@ -13,7 +15,9 @@ import {
   ArrowSquareOut,
 } from "@phosphor-icons/react";
 import { AnimatePresence, motion } from "motion/react";
+import { withBasePath } from "@/lib/base-path";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { withBasePath } from "@/lib/base-path";
 
 const links = [
   { href: "/dashboard", label: "Overview", icon: House },
@@ -47,7 +51,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
   });
 
   async function logout() {
-    await fetch("/api/auth", { method: "DELETE" });
+    await fetch(withBasePath("/api/auth"), { method: "DELETE" });
     router.replace("/login");
     router.refresh();
   }

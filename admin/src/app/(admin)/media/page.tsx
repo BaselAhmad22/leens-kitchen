@@ -1,9 +1,13 @@
 "use client";
 
 import { FormEvent, useEffect, useState } from "react";
+import { withBasePath } from "@/lib/base-path";
 import { PageHeader } from "@/components/save-bar";
+import { withBasePath } from "@/lib/base-path";
 import { UploadSimple, Trash } from "@phosphor-icons/react";
+import { withBasePath } from "@/lib/base-path";
 import { motion } from "motion/react";
+import { withBasePath } from "@/lib/base-path";
 
 type MediaFile = { name: string; path: string };
 
@@ -13,7 +17,7 @@ export default function MediaPage() {
   const [message, setMessage] = useState("");
 
   async function load() {
-    const res = await fetch("/api/media");
+    const res = await fetch(withBasePath("/api/media"));
     const data = await res.json();
     setFiles(data.files || []);
   }
@@ -28,7 +32,7 @@ export default function MediaPage() {
     const fd = new FormData(form);
     setUploading(true);
     setMessage("");
-    const res = await fetch("/api/media", { method: "POST", body: fd });
+    const res = await fetch(withBasePath("/api/media"), { method: "POST", body: fd });
     setUploading(false);
     if (!res.ok) {
       setMessage("Upload failed");
@@ -41,7 +45,7 @@ export default function MediaPage() {
 
   async function remove(name: string) {
     if (!confirm(`Delete ${name}?`)) return;
-    await fetch("/api/media", {
+    await fetch(withBasePath("/api/media"), {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name }),
@@ -89,7 +93,7 @@ export default function MediaPage() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={`/api/media-file/${f.name}`}
+              src={withBasePath(`/api/media-file/${f.name}`)}
               alt={f.name}
               className="aspect-[4/3] w-full object-cover"
             />

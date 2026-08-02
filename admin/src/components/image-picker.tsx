@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { withBasePath } from "@/lib/base-path";
 import { Image as ImageIcon } from "@phosphor-icons/react";
+import { withBasePath } from "@/lib/base-path";
 
 type MediaFile = { name: string; path: string };
 
@@ -17,7 +19,7 @@ export function ImagePicker({
 
   useEffect(() => {
     if (!open) return;
-    fetch("/api/media")
+    fetch(withBasePath("/api/media")
       .then((r) => r.json())
       .then((d) => setFiles(d.files || []));
   }, [open]);
@@ -28,7 +30,7 @@ export function ImagePicker({
         {value ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
-            src={`/api/media-file/${value.replace("/images/", "")}`}
+            src={withBasePath(`/api/media-file/${value.replace("/images/", "")}`)}
             alt=""
             className="h-18 w-28 rounded-[12px] border border-border object-cover"
           />
@@ -63,7 +65,7 @@ export function ImagePicker({
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={`/api/media-file/${f.name}`}
+                src={withBasePath(`/api/media-file/${f.name}`)}
                 alt={f.name}
                 className="aspect-[4/3] w-full object-cover"
               />

@@ -1,9 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import { withBasePath } from "@/lib/base-path";
 import { ImagePicker } from "@/components/image-picker";
+import { withBasePath } from "@/lib/base-path";
 import { SaveBar, useSiteEditor } from "@/components/save-bar";
+import { withBasePath } from "@/lib/base-path";
 import type { MenuCategory, MenuItem, SiteData } from "@/lib/types";
+import { withBasePath } from "@/lib/base-path";
 import {
   ArrowLeft,
   CaretRight,
@@ -301,7 +305,7 @@ export function MenuEditor({ initial }: { initial: SiteData }) {
                         {item.image ? (
                           // eslint-disable-next-line @next/next/no-img-element
                           <img
-                            src={`/api/media-file/${item.image.replace("/images/", "")}`}
+                            src={withBasePath(`/api/media-file/${item.image.replace("/images/", "")}`)}
                             alt=""
                             className="h-9 w-12 rounded-md border border-border object-cover"
                           />

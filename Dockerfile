@@ -10,6 +10,8 @@ WORKDIR /app
 COPY --from=admin-deps /app/node_modules ./node_modules
 COPY admin/ ./
 ENV NEXT_TELEMETRY_DISABLED=1
+ENV ADMIN_BASE_PATH=/studio
+ENV NEXT_PUBLIC_ADMIN_BASE_PATH=/studio
 RUN npm run build
 
 FROM node:22-bookworm-slim AS site-deps

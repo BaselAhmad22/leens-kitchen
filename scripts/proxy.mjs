@@ -2,12 +2,11 @@ import http from "node:http";
 import { request as httpRequest } from "node:http";
 
 const port = Number(process.env.PORT || 8080);
-const adminHostHint = (process.env.ADMIN_HOST_HINT || "admin").toLowerCase();
 
 function pickTarget(req) {
-  const host = String(req.headers.host || "").toLowerCase();
   const url = String(req.url || "");
-  if (host.includes(adminHostHint) || url.startsWith("/studio")) {
+  // Admin is mounted at /studio (Next.js basePath)
+  if (url === "/studio" || url.startsWith("/studio/") || url.startsWith("/studio?")) {
     return { host: "127.0.0.1", port: 3001 };
   }
   return { host: "127.0.0.1", port: 3000 };

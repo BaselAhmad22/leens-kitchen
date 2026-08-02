@@ -1,8 +1,11 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { withBasePath } from "@/lib/base-path";
 import { useRouter } from "next/navigation";
+import { withBasePath } from "@/lib/base-path";
 import { motion } from "motion/react";
+import { withBasePath } from "@/lib/base-path";
 
 const ease = [0.32, 0.72, 0, 1] as const;
 
@@ -16,7 +19,7 @@ export default function LoginPage() {
     e.preventDefault();
     setLoading(true);
     setError("");
-    const res = await fetch("/api/auth", {
+    const res = await fetch(withBasePath("/api/auth"), {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ password }),
